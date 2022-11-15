@@ -1,0 +1,85 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+/* ---------------------------------------------------- */
+
+h1 {
+	text-align: center;
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.zena {
+	border: 2px solid rgb(83, 83, 241);
+	display: flex;
+	flex-wrap: wrap;
+	flex: 20%;
+	justify-content: center;
+	margin: 5px;
+	border-radius: 8px;
+}
+
+.img {
+	border-radius: 50%;
+	margin: 10px;
+	background-size: cover;
+}
+
+.popis {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 10px;
+}
+
+h2 {
+	width: 100%;
+	margin: 0;
+}
+
+
+	/* TABLET */
+@media screen and (min-width: 540px) and (max-width: 960px){
+
+.zena {
+	float: left;
+	flex-wrap: nowrap;
+	flex: 40%;
+}
+
+.img {
+	margin: auto 10px;
+	width: 40%;
+	padding: 5px 0;
+}
+
+.popis {
+	text-align: left;
+	width: 60%;
+}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 540px){
+
+.zena {
+	flex-wrap: wrap;
+	flex-direction: row;
+	flex: 100%;
+}
+
+.popis {
+	text-align: center;
+}
+
+}
